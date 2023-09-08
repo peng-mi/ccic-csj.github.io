@@ -1,4 +1,41 @@
 site_name: 2023退修会 - 中圣荷西基督徒会堂
 theme:
+  logo: images/favicon.png
   name: material
+  palette:
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
 
+markdown_extensions:
+  - tables
+  - attr_list
+  - md_in_html
+  - def_list
+  - def_list
+  - pymdownx.superfences
+  - cell_row_span
+  - pymdownx.tasklist:
+      custom_checkbox: true
+plugins:
+  - glightbox
+  - search:
+      lang:
+        - en
+extra_css:
+  - stylesheets/extra.css
+extra:
+  generator: false
