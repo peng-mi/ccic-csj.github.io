@@ -1,4 +1,4 @@
-name: ci
+name: https://ccic-csj.github.io
 on:
   push:
     branches:
