@@ -27,7 +27,6 @@ markdown_extensions:
   - def_list
   - def_list
   - pymdownx.superfences
-  - cell_row_span
   - pymdownx.tasklist:
       custom_checkbox: true
 plugins:
