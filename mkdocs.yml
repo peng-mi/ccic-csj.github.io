@@ -1,40 +1,111 @@
-site_name: 2023退修会 - 中圣荷西基督徒会堂
+---
+nav:
+  - 退休会: index.md
+  - 活動安排:
+      - 日程表: agenda/agenda.md
+  - 晨耕材料:
+      - 星期六: 晨耕材料/星期六.md
+      - 星期日: 晨耕材料/星期日.md
+  - 詩歌敬拜:
+      - 星期六: 詩歌敬拜/星期六.md
+      - 星期日: 詩歌敬拜/星期日.md
+
 theme:
-  logo: images/favicon.png
   name: material
+  custom_dir: docs/overrides
   palette:
-    # Palette toggle for light mode
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
-      toggle:
-        icon: material/brightness-7
-        name: Switch to dark mode
-    # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       toggle:
-        icon: material/brightness-4
+        icon: material/white-balance-sunny
         name: Switch to light mode
+      primary: red # We use red to indicate that something is unthemed
+      accent: red
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+      primary: white
+      accent: red
   features:
+    - navigation.instant
     - navigation.tabs
     - navigation.tabs.sticky
-    - navigation.sections
+    - navigation.top
+    - content.code.copy
+    - content.code.annotate
+  icon:
+    repo: fontawesome/brands/github
+  logo: https://images.squarespace-cdn.com/content/v1/62093451e124473bb9a5f88f/cc328e12-7228-4a34-82a7-f35418f82776/log_small.png?format=1500w
+  favicon: https://images.squarespace-cdn.com/content/v1/62093451e124473bb9a5f88f/cc328e12-7228-4a34-82a7-f35418f82776/log_small.png?format=1500w
 
 markdown_extensions:
-  - tables
+  - toc:
+      permalink: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      linenums: false
+  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.inlinehilite
+  - admonition
   - attr_list
   - md_in_html
-  - def_list
-  - def_list
-  - pymdownx.superfences
-  - pymdownx.tasklist:
-      custom_checkbox: true
+  - pymdownx.keys
+
 plugins:
-  - glightbox
-  - search:
-      lang:
-        - en
-extra_css:
-  - stylesheets/extra.css
+#  - search
+  - include-markdown
+  - section-index
+  - git-authors
+  - minify:
+      minify_html: true
+      minify_js: true
+      minify_css: true
+      cache_safe: true
+  - git-revision-date-localized:
+      fallback_to_build_date: true
+#  - spellcheck:
+#      known_words: dictionary.txt
+#      allow_unicode: no
+#      ignore_code: yes
+
 extra:
   generator: false
+  version:
+    provider: pengm
+
+extra_javascript:
+  - assets/js/main.js
+
+extra_css:
+  - assets/css/main.css
+  - assets/css/button.css
+  - assets/css/admonition.css
+  - assets/css/sidebar.css
+  - assets/css/navbar.css
+  - assets/css/table-of-contents.css
+  - assets/css/code.css
+  - assets/css/footer.css
+  - assets/css/home.css
+
+watch:
+  - docs
+  - mkdocs.yml
+  - .mailmap
+
+
+site_name: 中圣荷西基督会堂 <br> 2023 CSJ 退修会
+site_author: pengm
+site_description: <small>Sep 29 - Oct 1</small> <br> <small>Redwood Christian Park Boulder Creek, CA</small>
+copyright: Copyright &copy; 2023 中圣荷西基督会堂
+#repo_url: https://ccic-csj.github.io/
+#repo_name: ccic-csj.github.io
+site_url: https://ccic-csj.github.io/
+edit_uri: edit/main/docs/src
+docs_dir: docs/src
