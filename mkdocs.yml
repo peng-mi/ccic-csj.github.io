@@ -4,11 +4,9 @@ nav:
   - 活動安排:
       - 日程表: agenda/agenda.md
   - 晨耕材料:
-      - 星期六: 晨耕材料/星期六.md
-      - 星期日: 晨耕材料/星期日.md
+      - 晨耕材料: 晨耕材料/晨耕材料.md
   - 詩歌敬拜:
-      - 星期六: 詩歌敬拜/星期六.md
-      - 星期日: 詩歌敬拜/星期日.md
+      - 詩歌敬拜: 詩歌敬拜/詩歌敬拜.md
 
 theme:
   name: material
@@ -100,9 +98,9 @@ watch:
   - .mailmap
 
 
-site_name: 中圣荷西基督会堂 <br> 2023 CSJ 退修会
+site_name: 2023 退修会 - 中圣荷西基督会堂
 site_author: pengm
-site_description: <small>Sep 29 - Oct 1</small> <br> <small>Redwood Christian Park Boulder Creek, CA</small>
+site_description: 2023 退修会 - 中圣荷西基督会堂
 copyright: Copyright &copy; 2023 中圣荷西基督会堂
 #repo_url: https://ccic-csj.github.io/
 #repo_name: ccic-csj.github.io
