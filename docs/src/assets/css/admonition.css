@@ -6,7 +6,7 @@
 	--terminal-title-bg-color: #000;
 	--deep-dive-bg-color: rgb(43 52 145 / 0.2);
 	--you-will-learn-bg-color: #353a45;
-	--pitfall-bg-color: rgb(182 87 0 / 0.2);
+	--pitfall-bg-color: rgba(46, 182, 0, 0.81);
 }
 [data-md-color-scheme="default"] {
 	--admonition-border-color: rgba(0, 0, 0, 0.08);
@@ -17,6 +17,10 @@
 	--deep-dive-bg-color: rgb(243 244 253);
 	--you-will-learn-bg-color: rgb(246, 247, 249);
 	--pitfall-bg-color: rgb(254, 245, 231);
+}
+
+:root {
+  --md-admonition-icon--guitar: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="240px" height="240px" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" xmlns:xlink="http://www.w3.org/1999/xlink"><g><path style="opacity:0.974" fill="#000000" d="M 225.5,-0.5 C 227.167,-0.5 228.833,-0.5 230.5,-0.5C 230.667,59.8343 230.5,120.168 230,180.5C 224.847,195.597 214.514,205.264 199,209.5C 183.772,214.468 169.272,212.968 155.5,205C 143.335,194.005 141.168,181.172 149,166.5C 162.765,149.375 180.599,142.375 202.5,145.5C 203.833,113.833 203.833,82.1667 202.5,50.5C 166.577,58.2179 130.577,65.5513 94.5,72.5C 94.6667,117.835 94.5,163.168 94,208.5C 91.2676,216.791 86.4342,223.624 79.5,229C 72.2398,233.634 64.5732,237.134 56.5,239.5C 49.1667,239.5 41.8333,239.5 34.5,239.5C 8.89702,231.291 2.39702,215.291 15,191.5C 29.1445,176.172 46.6445,169.838 67.5,172.5C 67.5,125.5 67.5,78.5 67.5,31.5C 120.411,21.4514 173.078,10.7847 225.5,-0.5 Z"/></g></svg>')
 }
 
 .md-typeset details,
@@ -71,26 +75,26 @@ React Name: "You will learn"
 Admonition: "note" 
 React Name: "Note"
 */
-.md-typeset .admonition.note {
+.md-typeset .admonition.bible {
 	background: var(--note-bg-color);
 	padding: 0.8rem 1.4rem;
 	border-radius: 0.8rem;
 }
 
-.md-typeset .note .admonition-title {
+.md-typeset .bible .admonition-title {
 	font-size: 1rem;
 	background: transparent;
 	padding-bottom: 0;
 	color: rgb(68 172 153);
 }
 
-.md-typeset .note .admonition-title:before {
+.md-typeset .bible .admonition-title:before {
 	font-size: 1.1rem;
 	background: rgb(68 172 153);
 }
 
-.md-typeset .note > .admonition-title:before,
-.md-typeset .note > summary:before {
+.md-typeset .bible > .admonition-title:before,
+.md-typeset .bible > summary:before {
 	-webkit-mask-image: var(--md-admonition-icon--abstract);
 	mask-image: var(--md-admonition-icon--abstract);
 }
@@ -117,6 +121,30 @@ React Name: "Pitfall"
 	background: rgb(219 125 39);
 }
 
+/*
+Admonition: "warning"
+React Name: "Pitfall"
+*/
+.md-typeset .admonition.question {
+	background: var(--pitfall-bg-color);
+	padding: 0.8rem 1.4rem;
+	border-radius: 0.8rem;
+}
+
+.md-typeset .question .admonition-title {
+	font-size: 1rem;
+	background: transparent;
+	padding-bottom: 0;
+	color: rgb(219 125 39);
+}
+
+.md-typeset .question .admonition-title:before {
+	font-size: 1.1rem;
+	background: rgb(219 125 39);
+}
+
+
+
 /* 
 Admonition: "info" 
 React Name: "Deep Dive"
@@ -135,6 +163,28 @@ React Name: "Deep Dive"
 }
 
 .md-typeset .info .admonition-title:before {
+	font-size: 1.1rem;
+	background: rgb(136 145 236);
+}
+
+/*
+Admonition: "music"
+React Name: "Deep Dive"
+*/
+.md-typeset .admonition.music {
+	background: var(--deep-dive-bg-color);
+	padding: 0.8rem 1.4rem;
+	border-radius: 0.8rem;
+}
+
+.md-typeset .music .admonition-title {
+	font-size: 1rem;
+	background: transparent;
+	padding-bottom: 0;
+	color: rgb(156, 172, 112);
+}
+
+.md-typeset .music .admonition-title:before {
 	font-size: 1.1rem;
 	background: rgb(136 145 236);
 }
@@ -163,4 +213,40 @@ React Name: "Terminal"
 	background: transparent;
 	color: #fff;
 	box-shadow: none;
+}
+
+/*
+Admonition: "music"
+React Name: "Deep Dive"
+*/
+
+.md-typeset .admonition.guitar,
+.md-typeset :is(.admonition,details) {
+background: rgba(127, 155, 93, 0.1);
+border-radius: 0.8rem;
+font-size: 0.8rem;
+}
+
+
+.md-typeset .admonition.guitar {
+	background: rgba(127, 155, 93, 1);
+	padding: 0.8rem 1.4rem;
+	border-radius: 0.8rem;
+}
+
+.md-typeset .guitar .admonition-title {
+	font-size: 1rem;
+	background: transparent;
+	padding-bottom: 0;
+	color: rgb(127, 155, 93);
+}
+
+.md-typeset .guitar .admonition-title:before {
+	font-size: 1.1rem;
+	background: rgb(127, 155, 93);
+}
+
+.md-typeset .guitar > summary::before {
+  -webkit-mask-image: var(--md-admonition-icon--guitar);
+          mask-image: var(--md-admonition-icon--guitar);
 }
