@@ -1,9 +1,4 @@
----
-hide:
-  - footer-navigation
-  - navigation
-  - footer
----
+
 
 # 活動安排
 

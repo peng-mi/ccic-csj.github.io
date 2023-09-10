@@ -1,12 +1,9 @@
 ---
 nav:
   - 退休会: index.md
-  - 活動安排:
-      - 日程表: agenda/agenda.md
-  - 晨耕材料:
-      - 晨耕材料: 晨耕材料/晨耕材料.md
-  - 詩歌敬拜:
-      - 詩歌敬拜: 詩歌敬拜/詩歌敬拜.md
+  - 活動安排: agenda.md
+  - 晨耕材料: 晨耕材料.md
+  - 詩歌敬拜: 詩歌敬拜.md
 
 theme:
   name: material
