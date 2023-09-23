@@ -6,6 +6,8 @@ nav:
   - 詩歌敬拜: songs.md
   - 地圖信息: map.md
   - 攜帶物品: reminder.md
+  - 工作坊: register.md
+  - 拼車: car.md
 
 theme:
   name: material
